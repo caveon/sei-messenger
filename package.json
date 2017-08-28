@@ -1,0 +1,12 @@
+{
+  "name": "sei-messenger",
+  "version": "1.0.0",
+  "description": "A tool to communicate with SEI through window.postMessage()",
+  "main": "index.js",
+  "keywords": [
+    "sei",
+    "caveon"
+  ],
+  "author": "Caveon",
+  "license": "ISC"
+}
