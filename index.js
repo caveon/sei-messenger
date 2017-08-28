@@ -75,3 +75,5 @@ var SeiMessenger = function(origin, responseId) {
   self.init();
 
 }
+
+exports.SeiMessenger = SeiMessenger;
