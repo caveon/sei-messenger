@@ -20,5 +20,9 @@
     "start": "webpack -w",
     "dist": "webpack -p"
   },
-  "author": "Caveon"
+  "author": "Caveon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caveon/sei-messenger.git"
+  }
 }
