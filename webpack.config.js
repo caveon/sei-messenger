@@ -14,6 +14,9 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'SeiMessenger.min.js'
+    filename: 'SeiMessenger.min.js',
+    library: 'library',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   }
 }
