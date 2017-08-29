@@ -9,22 +9,24 @@ You can read more about integration in our [technical post](http://help.caveon.c
 
 ### Include/Import the file
 
-You can import the package, or build the minified version yourself, or download it from us at: [http://caveon-public.s3.amazonaws.com/SeiMessenger.js](http://caveon-public.s3.amazonaws.com/SeiMessenger.js)
+You can import the package, or use the minified version included in the repository.
 
 Download and include:
 
 ```
-<script type="text/javascript" src="/path/to/file.js"></script>
+<script type="text/javascript" src="/path/to/SeiMessenger.min.js"></script>
 ```
 
 Import
 
 ```
+
 // ES6
 import SeiMessenger from 'sei-messenger';
 
 // requireJS
 var SeiMessenger = require("sei-messenger");
+
 ```
 
 To use the library, simply instantiate a new instance:
