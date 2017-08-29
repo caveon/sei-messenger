@@ -17,3 +17,4 @@ xcuserdata
 .svn
 CVS
 npm-debug.log
+node_modules

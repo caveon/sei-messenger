@@ -9,7 +9,7 @@ You can read more about integration in our [technical post](http://help.caveon.c
 
 ### Include/Import the file
 
-You can include the package either by importing it or including it manually. The file does not use any export libraries and can be included plainly.
+You can import the package, or build the minified version yourself, or download it from us at: [http://caveon-public.s3.amazonaws.com/SeiMessenger.js](http://caveon-public.s3.amazonaws.com/SeiMessenger.js)
 
 Download and include:
 
@@ -20,7 +20,11 @@ Download and include:
 Import
 
 ```
-import 'sei-messenger'
+// ES6
+import SeiMessenger from 'sei-messenger';
+
+// requireJS
+var SeiMessenger = require("sei-messenger");
 ```
 
 To use the library, simply instantiate a new instance:
@@ -29,7 +33,7 @@ To use the library, simply instantiate a new instance:
 var messenger = new SeiMessenger();
 ```
 
-Then to communicate with SEI, simply call the `sendMessage()` method with the string response.
+Then to communicate with SEI, call the `sendMessage()` method with the message as a string.
 
 ```
 messenger.sendMessage('Your message to SEI here.');
