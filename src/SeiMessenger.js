@@ -24,7 +24,7 @@ class SeiMessenger {
    * @param {object} evt - 'message' browser event
    * @return {null} null
    */
-  pong = evt => {
+  pong = (evt) => {
     if(evt.data === 'pong') {
       this.seiWindow = evt.source;
     }
@@ -43,7 +43,7 @@ class SeiMessenger {
         return param[1];
       }
     }
-    return null;
+    return 'no query param found';
   }
 
   /**
@@ -52,9 +52,9 @@ class SeiMessenger {
    * @return {null} null
    */
   pingTargetWindow = thisWindow => {
-    this.numPingAttempts++;
     thisWindow.parent.postMessage({ seiPing: true }, this.seiOrigin);
     if(this.numPingAttempts < this.maxPingAttempts) {
+      this.numPingAttempts++;
       this.pingTargetWindow(thisWindow.parent)
     }
   }
@@ -64,7 +64,7 @@ class SeiMessenger {
    * @param {object} [meta = null] - meta data to send along with message to SEI
    * @return {null} null
    */
-  sendMessage = (message, meta = null) => {
+  sendMessage = (message = '', meta = null) => {
     this.seiWindow.postMessage({ message: message, response_id: this.responseId, meta: meta }, this.seiOrigin);
   }
 }
