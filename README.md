@@ -42,3 +42,9 @@ messenger.sendMessage('Your message to SEI here.');
 ```
 
 For an explanation of how the script works, and what additional utilities it supplies, visit the [technical post](http://help.caveon.com/kb-article/connecting-external-items-to-sei/) on help.caveon.com
+
+### Tests
+
+```
+npm run test
+```
