@@ -1,14 +1,14 @@
 /**
  * Sends a message to Caveon Secure Exam Interface
  * @param {string} [origin = https://sei.caveon.com] - origin of the message destination
- * @param {string} [responseId = query parameter: 'sei_response_id'] - response id passed from SEI
+ * @param {string} [responseId = query parameter: 'response_id'] - response id passed from SEI
  * @return {null} null
  */
 
 class SeiMessenger {
   constructor(origin, responseId) {
     this.seiOrigin = origin || 'https://sei.caveon.com';
-    this.seiQueryParamName = 'sei_response_id';
+    this.seiQueryParamName = 'response_id';
     this.maxPingAttempts = 10;
     this.numPingAttempts = 0;
     this.seiWindow = window.parent;
@@ -31,8 +31,8 @@ class SeiMessenger {
   }
 
   /**
-   * Grabs the sei_response_id query parameter
-   * @return {string} sei_response_id query parameter
+   * Grabs the response_id query parameter
+   * @return {string} response_id query parameter
    */
   getSeiResponseId = () => {
     const query = window.location.search.substring(1);
