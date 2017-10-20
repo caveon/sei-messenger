@@ -5,7 +5,7 @@ const window = global.window;
 const initialLocation = window.location.href;
 
 before(function() {
-  window.history.pushState({}, '', initialLocation + '?sei_response_id=exampleResponseIdHere')
+  window.history.pushState({}, '', initialLocation + '?response_id=exampleResponseIdHere')
 })
 after(function() {
   window.history.pushState({}, '', initialLocation)
@@ -17,7 +17,7 @@ describe('SeiMessenger', function() {
       const s = new SeiMessenger();
       expect(s.seiOrigin).to.equal('https://sei.caveon.com');
       expect(s.maxPingAttempts).to.equal(10);
-      expect(s.seiQueryParamName).to.equal('sei_response_id');
+      expect(s.seiQueryParamName).to.equal('response_id');
       return false;
     })
     it('instantiates instance with supplied origin', function() {
@@ -25,20 +25,20 @@ describe('SeiMessenger', function() {
       const s = new SeiMessenger(origin);
       expect(s.seiOrigin).to.equal(origin);
       expect(s.maxPingAttempts).to.equal(10);
-      expect(s.seiQueryParamName).to.equal('sei_response_id');
+      expect(s.seiQueryParamName).to.equal('response_id');
     })
     it('instantiates instance with default response_id', function() {
       const s = new SeiMessenger();
       expect(s.responseId).to.equal('exampleResponseIdHere');
       expect(s.maxPingAttempts).to.equal(10);
-      expect(s.seiQueryParamName).to.equal('sei_response_id');
+      expect(s.seiQueryParamName).to.equal('response_id');
     })
     it('instantiates instance with supplied response_id', function() {
       const responseId = 'testid';
       const s = new SeiMessenger(null, responseId);
       expect(s.responseId).to.equal(responseId)
       expect(s.maxPingAttempts).to.equal(10);
-      expect(s.seiQueryParamName).to.equal('sei_response_id');
+      expect(s.seiQueryParamName).to.equal('response_id');
     })
   })
 
@@ -55,7 +55,7 @@ describe('SeiMessenger', function() {
   })
 
   describe('getSeiResponseId', function() {
-    it('retreives `sei_response_id` query parameter', function() {
+    it('retreives `response_id` query parameter', function() {
       const s = new SeiMessenger();
       s.getSeiResponseId();
       expect(s.getSeiResponseId()).to.equal('exampleResponseIdHere');
