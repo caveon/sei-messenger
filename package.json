@@ -1,6 +1,6 @@
 {
   "name": "sei-messenger",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A tool to communicate with SEI through window.postMessage()",
   "main": "SeiMessenger.min.js",
   "keywords": [
