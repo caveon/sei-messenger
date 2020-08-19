@@ -1,13 +1,13 @@
 /**
  * Sends a message to Caveon Secure Exam Interface
- * @param {string} [origin = https://sei.caveon.com] - origin of the message destination
+ * @param {string} [origin = https://scorpion.caveon.com] - origin of the message destination
  * @param {string} [responseId = query parameter: 'response_id'] - response id passed from SEI
  * @return {null} null
  */
 
 class SeiMessenger {
   constructor(origin, responseId) {
-    this.seiOrigin = origin || 'https://sei.caveon.com';
+    this.seiOrigin = origin || 'https://scorpion.caveon.com';
     this.seiQueryParamName = 'response_id';
     this.maxPingAttempts = 10;
     this.numPingAttempts = 0;

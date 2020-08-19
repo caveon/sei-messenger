@@ -15,7 +15,7 @@ describe('SeiMessenger', function() {
 
     it('instantiates instance with default origin', function() {
       const s = new SeiMessenger();
-      expect(s.seiOrigin).to.equal('https://sei.caveon.com');
+      expect(s.seiOrigin).to.equal('https://scorpion.caveon.com');
       expect(s.maxPingAttempts).to.equal(10);
       expect(s.seiQueryParamName).to.equal('response_id');
       return false;
